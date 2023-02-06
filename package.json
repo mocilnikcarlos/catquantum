@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "co": "sui-mono commit"
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@s-ui/mono": "^2.34.0",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",
