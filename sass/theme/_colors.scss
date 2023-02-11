@@ -1,31 +1,39 @@
-// Primary
-$lilepink: #D08AFF;
-$lileviolet: #A07DE8;
-$lile: #9C96FF;
-$lileblue: #7D94E8;
-$littleblue: #8AC2FF;
+$colors: (
+    primary: (
+        lilepink: #D08AFF,
+        lileviolet: #A07DE8,
+        lile: #9C96FF,
+        lileblue: #7D94E8,
+        littleblue: #8AC2FF
+    ),
+    secundary: (
+        violetsec: #837DFF,
+        cremesec: #FFB6B0,
+        yellowsec: #FFEA7D,
+        greensec: #8AFFBC,
+    ),
+    baw: (
+        black: #3A3A3B,
+        graydark: #797A7A,
+        gray: #B8B9BA,
+        littlegray: #DEDFE0,
+        white: #F7F8FA
+    ),
+    message: (
+        info: #4253FF,
+        error: #FF3636,
+        warning: #FFDF69,
+        success: #2EEB8A
+    ),
+    compound: (
+        littlepurple: #A264CC,
+        purple: #671D99,
+        yellow: #FFF4D6,
+        brown: #CCA664
+    )
+);
 
-// Secundary
-$violetsec: #837DFF;
-$cremesec: #FFB6B0;
-$yellowsec: #FFEA7D;
-$greensec: #8AFFBC;
-
-// Black and white
-$black: #3A3A3B;
-$graydark: #797A7A;
-$gray: #B8B9BA;
-$littlegray: #DEDFE0;
-$white: #F7F8FA;
-
-// Message
-$info: #4253FF;
-$error: #FF3636;
-$warning: #FFDF69;
-$success: #2EEB8A;
-
-// Compound
-$littlepurple: #A264CC;
-$purple: #671D99;
-$yellow: #FFF4D6;
-$brown: #CCA664;
+@function clr($base, $shade: base) {
+    $color: map-get(map-get($colors, $base), $shade);
+    @return $color;
+}
