@@ -1,4 +1,5 @@
 import Header from "@/components/header/header";
+import "@/sass/theme/globals.scss";
 
 export default function RootLayout({ children }) {
   return (
