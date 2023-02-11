@@ -1,10 +1,10 @@
-import React from "react";
+import Freelancer from "./home/freelancer";
 
 const Home = () => {
   return (
-    <main>
-      <h2>Hola mundo</h2>
-    </main>
+    <>
+      <Freelancer />
+    </>
   );
 };
 
