@@ -1,4 +1,4 @@
-@import "../../sass/main.scss";
+@import "@/sass/main.scss";
 
 .title {
     color: getColor(primary, lile, 75);
@@ -26,7 +26,5 @@
 }
 
 .flex {
-    background: rebeccapurple;
-    width: 800px;
-    height: 100vh;
+    flex-direction: column;
 }
