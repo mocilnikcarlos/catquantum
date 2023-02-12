@@ -36,6 +36,7 @@ $colorSolid: (
     ),
 );
 
+// Function get colors
 @function getColor($thisVar, $thisColor: default, $trans: FF) {
     $solid: map-get(map-get($colorSolid, $thisVar), $thisColor);
     $transparent: map-get($transparency, $trans);
@@ -45,12 +46,14 @@ $colorSolid: (
     @return $color;
 }
 
+// Function gradient 2 colors
 @function gradientDoble($deg: 0, $color1, $color2) {
     $linear: linear-gradient($deg + deg, $color1 0%, $color2 100%);
 
     @return $linear;
 }
 
+// Function gradient 3 colors
 @function gradientTriple($deg: 0, $color1, $trans1: 0, $color2, $trans2: 100, $color3, $trans3: 100) {
     $linear: linear-gradient($deg + deg, $color1 $trans1 + #{"%"}, $color2 $trans2 + #{"%"}, $color3 $trans3 + #{"%"});
 
