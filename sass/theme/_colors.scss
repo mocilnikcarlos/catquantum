@@ -1,0 +1,61 @@
+@import "../maps/mapcolors";
+
+// All colors
+$colorSolid: (
+    primary: (
+        lilepink: #d08aff,
+        lileviolet: #a07de8,
+        lile: #9c96ff,
+        lileblue: #7d94e8,
+        littleblue: #8ac2ff,
+    ),
+    secundary: (
+        violetsec: #837dff,
+        cremesec: #ffb6b0,
+        yellowsec: #ffea7d,
+        greensec: #8affbc,
+    ),
+    baw: (
+        black: #3a3a3b,
+        graydark: #797a7a,
+        gray: #b8b9ba,
+        littlegray: #dedfe0,
+        white: #f7f8fa,
+    ),
+    message: (
+        info: #4253ff,
+        error: #ff3636,
+        warning: #ffdf69,
+        success: #2eeb8a,
+    ),
+    compound: (
+        littlepurple: #a264cc,
+        purple: #671d99,
+        yellow: #fff4d6,
+        brown: #cca664,
+    ),
+);
+
+// Function get colors
+@function getColor($thisVar, $thisColor: default, $trans: FF) {
+    $solid: map-get(map-get($colorSolid, $thisVar), $thisColor);
+    $transparent: map-get($transparency, $trans);
+
+    $color: $solid +#{$transparent};
+
+    @return $color;
+}
+
+// Function gradient 2 colors
+@function gradientDoble($deg: 0, $color1, $color2) {
+    $linear: linear-gradient($deg + deg, $color1 0%, $color2 100%);
+
+    @return $linear;
+}
+
+// Function gradient 3 colors
+@function gradientTriple($deg: 0, $color1, $trans1: 0, $color2, $trans2: 100, $color3, $trans3: 100) {
+    $linear: linear-gradient($deg + deg, $color1 $trans1 + #{"%"}, $color2 $trans2 + #{"%"}, $color3 $trans3 + #{"%"});
+
+    @return $linear;
+}

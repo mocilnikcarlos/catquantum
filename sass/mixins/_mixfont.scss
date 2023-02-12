@@ -1,0 +1,14 @@
+@import "../theme/fonts";
+@import "../sizes/fonts";
+
+$font: (
+    title: "OMEGLE",
+    text: "Quicksand",
+);
+
+@mixin fontFamily($family, $type, $size) {
+    font-family: map-get($font, $family);
+    font-weight: $type;
+    font-size: map-get($fontSize, $size);
+    letter-spacing: 0.06em;
+}

@@ -1,0 +1,26 @@
+@import "../../sass/main.scss";
+
+.title {
+    color: getColor(primary, lile, 75);
+    @include fontFamily(text, bold, xl);
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    background: gradientDoble(45, getColor(primary, lile), getColor(secundary, violetsec));
+}
+
+.card1 {
+    width: 250px;
+    height: 250px;
+    background: gradientTriple(
+        135,
+        getColor(primary, lileblue),
+        0,
+        getColor(primary, lileblue, 04),
+        48.44,
+        getColor(primary, lileblue),
+        100
+    );
+}
