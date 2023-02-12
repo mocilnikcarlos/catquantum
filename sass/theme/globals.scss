@@ -1,15 +1,18 @@
-*,*::after,*::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', 'system' ,'sans-serif';
+    font-family: "Montserrat", "system-ui", "sans-serif";
 }
 
 a {
     text-decoration: none;
 }
 
-ul, li {
+ul,
+li {
     list-style: none;
 }
