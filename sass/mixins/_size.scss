@@ -1,0 +1,51 @@
+@mixin size($type, $direction: all, $size) {
+    @if $type == padding {
+        @if $direction == all {
+            padding: $size + px;
+        } @else if $direction == left {
+            padding-left: $size + px;
+        } @else if $direction == top {
+            padding-top: $size + px;
+        } @else if $direction == right {
+            padding-right: $size + px;
+        } @else if $direction == bottom {
+            padding-bottom: $size + px;
+        } @else if $direction == xy {
+            $x: $size - 8px;
+            padding: $x $size + px;
+        } @else if $direction == yx {
+            $y: $size - 8px;
+            padding: $size + px $y;
+        } @else if $direction == x {
+            padding-left: $size + px;
+            padding-right: $size + px;
+        } @else if $direction == y {
+            padding-top: $size + px;
+            padding-bottom: $size + px;
+        }
+    } @else if $type == margin {
+        @if $direction == all {
+            margin: $size + px;
+        } @else if $direction == left {
+            margin-left: $size + px;
+        } @else if $direction == top {
+            margin-top: $size + px;
+        } @else if $direction == right {
+            margin-right: $size + px;
+        } @else if $direction == bottom {
+            margin-bottom: $size + px;
+        } @else if $direction == xy {
+            $x: $size - 8px;
+            margin: $x $size + px;
+        } @else if $direction == yx {
+            $y: $size - 8px;
+            margin: $size + px $y;
+        } @else if $direction == x {
+            margin-left: $size + px;
+            margin-right: $size + px;
+        } @else if $direction == y {
+            margin-top: $size + px;
+            margin-bottom: $size + px;
+        }
+    }
+}
