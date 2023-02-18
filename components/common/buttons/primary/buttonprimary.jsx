@@ -1,7 +1,7 @@
-import style from "./buttonprimary.module.scss";
+import style from "../button.module.scss";
 
-const ButtonPrimary = () => {
-  return <button className={style.button}>Contacto</button>;
+const ButtonPrimary = ({ children }) => {
+  return <button className={style.buttonprimary}>{children}</button>;
 };
 
 export default ButtonPrimary;

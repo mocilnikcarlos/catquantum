@@ -1,0 +1,54 @@
+@import "@/sass/main.scss";
+
+.buttonnav {
+    position: relative;
+    @include size(padding, all, 24);
+    color: getColor(baw, gray);
+    @include fontFamily(text, 700, xs);
+    text-transform: uppercase;
+    border-radius: getSize(md);
+    background: getColor(baw, white);
+
+    &:hover::before {
+        position: absolute;
+        content: "";
+        top: -1px;
+        left: -1px;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background: gradientTriple(
+            135,
+            getColor(primary, lile),
+            0,
+            getColor(primary, lile, 04),
+            50,
+            getColor(primary, lile),
+            100
+        );
+        border-radius: inherit;
+        z-index: -1;
+    }
+}
+
+.buttonprimary {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    @include size(padding, xy, 24);
+    gap: 10px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    color: getColor(baw, white);
+    background: getColor(primary, lileviolet);
+    @include fontFamily(text, 700, xs);
+    box-shadow: 0px 4px 30px getColor(primary, lileviolet, 35);
+    transition: all 200ms ease-in-out;
+    text-transform: uppercase;
+
+    &:hover {
+        box-shadow: 0px 7px 30px getColor(primary, lileviolet, 75);
+        transform: translateY(-4px);
+        transition: all 200ms ease-in-out;
+    }
+}

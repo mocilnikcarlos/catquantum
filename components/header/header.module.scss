@@ -1,0 +1,12 @@
+@import "@/sass/main.scss";
+
+.header {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include size(padding, x, 116);
+    @include size(padding, y, 22);
+    border-bottom: solid 1px getColor(baw, littlegray);
+}

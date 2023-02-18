@@ -7,10 +7,10 @@ import style from "./freelancer.module.scss";
 const Freelancer = () => {
   return (
     <Flex className={style.flex}>
-      <ButtonPrimary />
       <h2 className={style.title}>Pagina de inicio</h2>
       <div className={style.card}></div>
       <div className={style.card1}></div>
+      <ButtonPrimary>Mi boton</ButtonPrimary>
       <TitleSection
         title="Este titulo"
         subtitle="fue cambiado"

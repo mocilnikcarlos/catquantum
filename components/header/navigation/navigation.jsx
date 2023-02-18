@@ -1,16 +1,33 @@
 import Link from "next/link";
+import style from "@/components/common/buttons/button.module.scss";
+import nav from "@/components/header/navigation/nav.module.scss";
 
-const NAV_LINK = [
-  { label: "Freelancer", route: "/" },
-  { label: "Contratacion", route: "hiring" },
+const NAV_LINK_LEFT = [
+  { label: "freelancer", route: "/" },
+  { label: "cat quantum", route: "/#catquantum" },
+];
+
+const NAV_LINK_RIGHT = [
+  { label: "proyecto", route: "/#project" },
+  { label: "contratacion", route: "/hiring" },
 ];
 
 const Navigation = () => {
   return (
-    <ul>
-      {NAV_LINK.map(({ label, route }) => (
+    <ul className={nav.ul}>
+      {NAV_LINK_LEFT.map(({ label, route }) => (
         <li key={route}>
-          <Link href={route}>{label}</Link>
+          <Link className={style.buttonnav} href={route}>
+            {label}
+          </Link>
+        </li>
+      ))}
+      <h1>LOGO</h1>
+      {NAV_LINK_RIGHT.map(({ label, route }) => (
+        <li key={route}>
+          <Link className={style.buttonnav} href={route}>
+            {label}
+          </Link>
         </li>
       ))}
     </ul>
