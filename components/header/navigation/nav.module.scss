@@ -1,5 +1,17 @@
+@import "@/sass/main.scss";
+
 .ul {
     display: flex;
     align-items: center;
     gap: 24px;
+}
+
+.logo {
+    width: 97.44px;
+    height: 59.66px;
+
+    & path {
+        fill: currentColor;
+        color: getColor(baw, black);
+    }
 }

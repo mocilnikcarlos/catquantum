@@ -1,6 +1,7 @@
 import Link from "next/link";
 import style from "@/components/common/buttons/button.module.scss";
 import nav from "@/components/header/navigation/nav.module.scss";
+import Logoblack from "@/components/svg/logoblack";
 
 const NAV_LINK_LEFT = [
   { label: "freelancer", route: "/" },
@@ -22,7 +23,7 @@ const Navigation = () => {
           </Link>
         </li>
       ))}
-      <h1>LOGO</h1>
+      <Logoblack clasename={nav.logo} />
       {NAV_LINK_RIGHT.map(({ label, route }) => (
         <li key={route}>
           <Link className={style.buttonnav} href={route}>

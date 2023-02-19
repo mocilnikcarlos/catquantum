@@ -12,8 +12,8 @@
     &:hover::before {
         position: absolute;
         content: "";
-        top: -1px;
-        left: -1px;
+        top: -0.06em;
+        left: -0.06em;
         width: calc(100% + 2px);
         height: calc(100% + 2px);
         background: gradientTriple(
@@ -36,7 +36,7 @@
     height: fit-content;
     @include size(padding, xy, 24);
     gap: 10px;
-    border-radius: 50px;
+    border-radius: 3.125em;
     border: none;
     cursor: pointer;
     color: getColor(baw, white);
@@ -48,7 +48,7 @@
 
     &:hover {
         box-shadow: 0px 7px 30px getColor(primary, lileviolet, 75);
-        transform: translateY(-4px);
+        transform: translateY(-0.25em);
         transition: all 200ms ease-in-out;
     }
 }

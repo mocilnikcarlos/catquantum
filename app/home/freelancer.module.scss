@@ -29,3 +29,14 @@
     flex-direction: column;
     gap: 36px;
 }
+
+.icon {
+    background: darkcyan;
+    width: 100px;
+    height: 100px;
+
+    & path {
+        fill: currentColor;
+        color: blue;
+    }
+}
