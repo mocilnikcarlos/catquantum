@@ -1,5 +1,3 @@
-import React from "react";
-
 const Hiring = () => {
   return <h2>Pagina de contratacion</h2>;
 };

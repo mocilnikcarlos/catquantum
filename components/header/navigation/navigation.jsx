@@ -16,6 +16,7 @@ const NAV_LINK_RIGHT = [
 const Navigation = () => {
   return (
     <ul className={nav.ul}>
+      {/* navegacion izquierda */}
       {NAV_LINK_LEFT.map(({ label, route }) => (
         <li key={route}>
           <Link className={style.buttonnav} href={route}>
@@ -23,7 +24,9 @@ const Navigation = () => {
           </Link>
         </li>
       ))}
+      {/* logo */}
       <Logoblack clasename={nav.logo} />
+      {/* navegacion derecha */}
       {NAV_LINK_RIGHT.map(({ label, route }) => (
         <li key={route}>
           <Link className={style.buttonnav} href={route}>
