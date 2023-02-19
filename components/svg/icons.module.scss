@@ -1,0 +1,11 @@
+@import "@/sass/main.scss";
+
+.icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    & path {
+        fill: currentColor;
+    }
+}

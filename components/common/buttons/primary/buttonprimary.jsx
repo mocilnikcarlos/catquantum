@@ -1,7 +1,19 @@
+import Link from "next/link";
 import style from "../button.module.scss";
 
-const ButtonPrimary = ({ children }) => {
-  return <button className={style.buttonprimary}>{children}</button>;
+const ButtonPrimary = ({ children, onClick }) => {
+  return (
+    <button onClick={onClick} className={style.buttonprimary}>
+      {children}
+    </button>
+  );
 };
 
-export default ButtonPrimary;
+const ButtonPrimaryLink = ({ children, href }) => {
+  return (
+    <Link href={href} className={style.buttonprimary}>
+      {children}
+    </Link>
+  );
+};
+export { ButtonPrimary, ButtonPrimaryLink };

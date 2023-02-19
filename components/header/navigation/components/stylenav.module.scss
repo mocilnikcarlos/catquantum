@@ -1,0 +1,7 @@
+@import "@/sass/main.scss";
+
+.ul {
+    display: flex;
+    align-items: center;
+    gap: getSize(md);
+}

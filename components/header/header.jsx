@@ -1,8 +1,14 @@
 "use client";
 import Navigation from "./navigation/navigation";
+import { ButtonPrimaryLink } from "../common/buttons/primary/buttonprimary";
+import ButtonNav from "./navigation/components/buttonnav";
+import ListNav from "./navigation/components/listnav";
+
+import Behance from "../svg/behance";
+import Whatsapp from "../svg/whatsapp";
+
 import style from "@/components/header/header.module.scss";
-import nav from "@/components/header/navigation/nav.module.scss";
-import ButtonPrimary from "../common/buttons/primary/buttonprimary";
+import button from "@/components/common/buttons/button.module.scss";
 
 // Hook scroll header
 import colorChange from "@/components/hooks/useScroll";
@@ -12,11 +18,20 @@ const Header = () => {
 
   return (
     <header className={`${style.header} ${headerIsActive ? style.active : ""}`}>
-      <h1>REDES</h1>
-      <nav className={nav.nav}>
-        <Navigation />
-      </nav>
-      <ButtonPrimary>contacto</ButtonPrimary>
+      <ListNav>
+        <li>
+          <ButtonNav href={"/#"} className={button.buttonnavicon}>
+            <Whatsapp />
+          </ButtonNav>
+        </li>
+        <li>
+          <ButtonNav href={"/#"} className={button.buttonnavicon}>
+            <Behance />
+          </ButtonNav>
+        </li>
+      </ListNav>
+      <Navigation />
+      <ButtonPrimaryLink href={"/contacto"}>contacto</ButtonPrimaryLink>
     </header>
   );
 };

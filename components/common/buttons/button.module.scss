@@ -1,13 +1,13 @@
 @import "@/sass/main.scss";
 
-.buttonnav {
+.buttonnavtext {
     position: relative;
+    border-radius: getSize(md);
+    background: getColor(baw, white);
     @include size(padding, all, 24);
     color: getColor(baw, gray);
     @include fontFamily(text, 700, xs);
     text-transform: uppercase;
-    border-radius: getSize(md);
-    background: getColor(baw, white);
 
     &:hover::before {
         position: absolute;
@@ -27,6 +27,42 @@
         );
         border-radius: inherit;
         z-index: -1;
+    }
+}
+
+.buttonnavicon {
+    display: block;
+    position: relative;
+    border-radius: getSize(s);
+    background: getColor(baw, white);
+    @include size(padding, all, 16);
+    color: getColor(baw, gray);
+    transition: all 200ms ease-in-out;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: -0.06em;
+        left: -0.06em;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background: gradientTriple(
+            135,
+            getColor(primary, lile),
+            0,
+            getColor(primary, lile, 04),
+            50,
+            getColor(primary, lile),
+            100
+        );
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+    &:hover {
+        color: getColor(baw, white);
+        background-color: getColor(primary, lileblue);
+        transition: all 200ms ease-in-out;
     }
 }
 

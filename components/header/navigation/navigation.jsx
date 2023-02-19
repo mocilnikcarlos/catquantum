@@ -1,40 +1,51 @@
-import Link from "next/link";
-import style from "@/components/common/buttons/button.module.scss";
-import nav from "@/components/header/navigation/nav.module.scss";
 import Logoblack from "@/components/svg/logoblack";
+import ButtonNav from "./components/buttonnav";
+import ListNav from "./components/listnav";
+
+import logo from "@/components/header/navigation/logo.module.scss";
+import style from "@/components/common/buttons/button.module.scss";
 
 const NAV_LINK_LEFT = [
-  { label: "freelancer", route: "/" },
-  { label: "cat quantum", route: "/#catquantum" },
+  {
+    route: "/",
+    label: "freelancer",
+  },
+  {
+    route: "/#catquantum",
+    label: "cat quantum",
+  },
 ];
 
 const NAV_LINK_RIGHT = [
-  { label: "proyecto", route: "/#project" },
-  { label: "contratacion", route: "/hiring" },
+  {
+    route: "/#projects",
+    label: "proyectos",
+  },
+  {
+    route: "/hiring",
+    label: "contratación",
+  },
 ];
 
 const Navigation = () => {
   return (
-    <ul className={nav.ul}>
-      {/* navegacion izquierda */}
-      {NAV_LINK_LEFT.map(({ label, route }) => (
+    <ListNav>
+      {NAV_LINK_LEFT.map(({ route, label }) => (
         <li key={route}>
-          <Link className={style.buttonnav} href={route}>
+          <ButtonNav href={route} className={style.buttonnavtext}>
             {label}
-          </Link>
+          </ButtonNav>
         </li>
       ))}
-      {/* logo */}
-      <Logoblack clasename={nav.logo} />
-      {/* navegacion derecha */}
-      {NAV_LINK_RIGHT.map(({ label, route }) => (
+      <Logoblack clasename={logo.logo} />
+      {NAV_LINK_RIGHT.map(({ route, label }) => (
         <li key={route}>
-          <Link className={style.buttonnav} href={route}>
+          <ButtonNav href={route} className={style.buttonnavtext}>
             {label}
-          </Link>
+          </ButtonNav>
         </li>
       ))}
-    </ul>
+    </ListNav>
   );
 };
 
