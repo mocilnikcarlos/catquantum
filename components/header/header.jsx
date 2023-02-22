@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className={`${style.header} ${headerIsActive ? style.active : ""}`}>
-      <ListNav>
+      <ListNav classname="gap-xs">
         <li>
           <ButtonNav href={"/#"} className={button.buttonnavicon}>
             <Whatsapp />

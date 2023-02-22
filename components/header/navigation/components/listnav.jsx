@@ -1,9 +1,9 @@
 import style from "./stylenav.module.scss";
 
-const ListNav = ({ children }) => {
+const ListNav = ({ children, classname }) => {
   return (
     <nav>
-      <ul className={style.ul}>{children}</ul>
+      <ul className={`${style.ul} ${classname}`}>{children}</ul>
     </nav>
   );
 };
