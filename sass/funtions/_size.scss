@@ -1,0 +1,7 @@
+@import "../maps/mapsize";
+
+@function getSize($thisSize) {
+    $mapSize: map-get($size, $thisSize);
+
+    @return $mapSize;
+}

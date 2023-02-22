@@ -1,0 +1,27 @@
+@import "@/sass/main.scss";
+
+.h1 {
+    @include fontFamily(title, normal, xl);
+    color: getColor(primary, lileviolet);
+    text-transform: uppercase;
+}
+
+.h2 {
+    @include fontFamily(title, normal, lg);
+    color: getColor(baw, black);
+    text-transform: lowercase;
+}
+
+.containertitle {
+    flex-direction: column;
+    gap: 64px;
+}
+
+.boxtitles {
+    flex-direction: column;
+    gap: 16px;
+}
+
+.text {
+    @include fontFamily(text, medium, md);
+}

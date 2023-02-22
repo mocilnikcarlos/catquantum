@@ -1,0 +1,7 @@
+@import "../maps/mapsize";
+
+@each $name, $value in $size {
+    .padding-#{$name} {
+        gap: $value;
+    }
+}

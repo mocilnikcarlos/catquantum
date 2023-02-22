@@ -1,7 +1,13 @@
+@import "../each/gaps";
+@import "../each/margin";
+@import "../each/padding";
+
 *,
 *::after,
 *::before {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {

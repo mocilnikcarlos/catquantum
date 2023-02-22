@@ -1,5 +1,7 @@
-// Colors
-@import "./theme/colors";
-
 // Mixins
 @import "./mixins/mixfont";
+@import "./mixins/size";
+
+// Funtions
+@import "./funtions/colors";
+@import "./funtions/size";

@@ -1,0 +1,11 @@
+@import "@/sass/main.scss";
+
+.logo {
+    width: 97.44px;
+    height: 59.66px;
+
+    & path {
+        fill: currentColor;
+        color: getColor(baw, black);
+    }
+}
